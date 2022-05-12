@@ -1,0 +1,50 @@
+@import '../../styles/settings.scss';
+
+.container a {
+    display: flex;
+    margin: 2rem auto 0;
+}
+
+.card {
+    width: 60%;
+    margin: auto;
+    background: $bg-secondary;
+    padding: 2.4rem 5rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    transition: $transition;
+}
+
+.card:hover {
+    border-color: $color-secondary;
+    background: transparent;
+}
+
+.details {
+    display: flex;
+    gap: 1rem;
+}
+
+.icon {
+    margin-top: 6px;
+    color: $color-primary;
+}
+
+// MEDIA QUERIES (MEDIUM) //
+@media screen and (max-width: 1024px) {
+    .card {
+        width: 100%;
+    }
+}
+
+// MEDIA QUERIES (SMALL) //
+@media screen and (max-width: 600px) {
+   .card {
+       padding: 2rem;
+       grid-template-columns: 1fr 1fr;
+       gap: 1rem;
+   }
+}

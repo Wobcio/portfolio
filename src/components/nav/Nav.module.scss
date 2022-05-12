@@ -1,0 +1,35 @@
+@use "sass:math";
+@import '../../styles/settings.scss';
+
+
+.nav {
+  position: fixed;
+  width: max-content;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  gap: 0.8rem;
+  border-radius: 3rem;
+  padding: 0.7rem 0.7rem;
+  backdrop-filter: blur(15px);
+  z-index: 2;
+
+  a {
+    font-size: 1.4rem;
+    padding: 0.9rem;
+    border-radius: 50%;
+    color: $color-light;
+    display: flex;
+  }
+
+  a:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  a.active {
+     background: $bg-secondary;
+     color: $color-white;
+  }
+}

@@ -1,0 +1,73 @@
+@import '../../styles/settings.scss';
+
+footer {
+    background: $color-primary;
+    margin-top: 7rem;
+    padding: 3rem 0;
+    font-size: 0.9rem;
+    text-align: center;
+
+    a {
+        color: $bg-primary;
+    }
+}
+
+.logo {
+   font-size: 2rem;
+   margin-bottom: 2rem;
+   font-weight: 500;
+   display: inline-block;
+}
+
+.permalinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto 3rem;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+
+    a {
+        background: $bg-primary;
+        color: $color-white;
+        padding: 0.8rem;
+        border-radius: 0.7rem;
+        display: flex;
+        font-size: 1.5rem;
+        border: 1px solid transparent;
+    }
+
+    a:hover {
+        border-color: $bg-primary;
+        background: transparent;
+        color: $bg-primary;
+    }
+}
+
+.copyright {
+    color: $bg-primary;
+    margin-bottom: 4rem;
+}
+
+// MEDIA QUERIES (MEDIUM) //
+@media screen and (max-width: 1024px) {
+
+}
+
+// MEDIA QUERIES (SMALL) //
+@media screen and (max-width: 600px) {
+   .permalinks {
+       flex-direction: column;
+       gap: 1.5rem;
+   }
+
+   .socials {
+       margin-bottom: 2.6rem;
+   }
+}

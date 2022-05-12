@@ -1,0 +1,127 @@
+@import './settings.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;  
+}
+
+html {
+    scroll-behavior: smooth;
+    
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    color: $color-white;
+    font-family: $font-text;
+    line-height: 1.7;
+    background-color: $bg-primary;
+    background-image: url(../images/bg-texture-3.png);
+}
+
+// GLOBAL STYLES //
+
+.container {
+    width: $container-width-lg;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 500;
+    font-family: $font-header;
+}
+
+h1 {
+    font-size: 2.5rem;
+    
+}
+
+section {
+    margin-top: 8rem;
+
+    > h2, > h5 {
+        text-align: center;
+        color: $color-light;
+    }
+
+    > h2 {
+        color: $color-primary;
+        margin-bottom: 3.5rem;
+    }
+}
+
+
+.text-light {
+    color: $color-light;
+}
+
+a {
+    color: $color-primary;
+    transition: $transition;
+}
+
+a:hover {
+    color: $color-white;
+}
+
+.btn {
+    width: max-content;
+    display: inline-block;
+    color: $color-primary;
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border: 1px solid $color-primary;
+    transition: $transition;
+}
+
+.btn:hover {
+    background: $color-white;
+    color: $bg-primary;
+    border-color: transparent;
+}
+
+.btn-primary {
+    background: $color-primary;
+    color: $bg-primary;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+// MEDIA QUERIES (MEDIUM) //
+@media screen and (max-width: 1024px) {
+    .container {
+        width: $container-width-md;
+    }
+
+    section {
+        margin-top: 6rem;
+    }
+}
+
+// MEDIA QUERIES (SMALL) //
+@media screen and (max-width: 600px) {
+    .container {
+        width: $container-width-sm;
+    }
+
+    section > h2 {
+        margin-bottom: 2rem;
+    }
+}

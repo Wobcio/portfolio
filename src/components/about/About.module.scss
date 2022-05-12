@@ -1,0 +1,155 @@
+@import '../../styles/settings.scss';
+
+
+.container {
+    display: grid;
+    grid-template-columns: 35% 50%;
+    gap: 15%;
+}
+
+.me {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    background: linear-gradient(45deg, transparent, $color-primary, transparent);
+}
+
+.me__image {
+    transform: rotate(-10deg);
+    border-radius: 2rem;
+    overflow: hidden;
+    transition: $transition;
+    position: relative;
+
+    .first {
+        opacity: 1;
+        transition: $transition;
+    }
+
+    .second {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: $transition;
+    }
+
+}
+
+.me:hover .me__image {
+    transform: rotate(350deg);
+
+    .first {
+        opacity: 0;
+    }
+    
+    .second {
+        opacity: 1;
+    }
+}
+
+.me__image:hover .first:hover .second:hover {
+    transform: rotate(-10deg);
+    border-radius: 2rem;
+    overflow: hidden;
+    transition: $transition;
+    position: relative;
+
+    .first {
+        opacity: 1;
+        transition: $transition;
+    }
+
+    .second {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: $transition;
+    }
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem
+}
+
+.card {
+    background: $bg-secondary;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: $transition;
+
+    small {
+        font-size: 0.7rem;
+        color: $color-light;
+    }
+
+    h5 {
+        font-size: 0.95rem;
+    }
+}
+
+.card:hover {
+    background: transparent;
+    border-color: $color-secondary;
+    cursor: default;
+}
+
+.icon {
+    color: $color-primary;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.content p {
+    margin: 2rem 0 2.6rem;
+    color: $color-light;
+}
+
+// MEDIA QUERIES (MEDIUM) //
+@media screen and (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .me {
+        width: 50%;
+        margin: 2rem auto 4rem;
+    }
+
+    .content p {
+        margin: 1rem 0 1.5rem;
+    }
+
+    .content {
+        text-align: center;
+    }
+}
+
+// MEDIA QUERIES (SMALL) //
+@media screen and (max-width: 600px) {
+   .me {
+       width: 65%;
+       margin: 0 auto 3rem;
+   }
+
+   .cards {
+       grid-template-columns: 1fr 1fr;
+       grid-template-rows: auto;
+       gap: 1rem;
+   }
+
+   .wide {
+       grid-column: 1 / span 2;
+       grid-row: 2;
+   }
+
+   .content p {
+       margin: 1.5rem 0;
+   }
+}
