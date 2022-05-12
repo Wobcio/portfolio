@@ -20,6 +20,7 @@
     overflow: hidden;
     transition: $transition;
     position: relative;
+    pointer-events: none;
 
     .first {
         opacity: 1;
