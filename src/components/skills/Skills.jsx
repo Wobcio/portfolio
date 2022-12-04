@@ -21,22 +21,22 @@ const Skills = ({setActiveNav}) => {
    const data = [
       {
          id: 1,
-         technology: 'HTML',
+         technology: 'React',
          level: 'Intermidiate',
       },
       {
          id: 2,
-         technology: 'CSS',
+         technology: 'JavaScript ES6',
          level: 'Intermidiate',
       },
       {
          id: 3,
-         technology: 'RWD',
+         technology: 'HTML',
          level: 'Intermidiate',
       },
       {
          id: 4,
-         technology: 'Bootstrap',
+         technology: 'SCSS',
          level: 'Intermidiate',
       },
       {
@@ -46,7 +46,7 @@ const Skills = ({setActiveNav}) => {
       },
       {
          id: 6,
-         technology: 'JavaScript ES6',
+         technology: 'RWD',
          level: 'Intermidiate',
       },
       {
@@ -56,19 +56,9 @@ const Skills = ({setActiveNav}) => {
       },
       {
          id: 8,
-         technology: 'React',
-         level: 'Intermidiate',
-      },
-      {
-         id: 9,
          technology: 'Redux',
          level: 'Beginner',
       },
-      {
-         id: 10,
-         technology: 'React Router',
-         level: 'Beginner',
-      }
    ]
    return (
 
@@ -83,13 +73,13 @@ const Skills = ({setActiveNav}) => {
                <div className={styles.card}>
 
                   {
-                     data.map(({id, technology, level}) => {
+                     data.map(({id, technology,level}) => {
                         return (
                            <article key={id} className={styles.details}>
                               <BsCheckCircle className={styles.icon}/>
                               <div>
                                  <h4>{technology}</h4>
-                                 <small>{level}</small>
+                                 {/* <small>{level}</small> */}
                               </div>
                            </article>
                         )

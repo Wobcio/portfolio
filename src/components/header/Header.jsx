@@ -25,7 +25,7 @@ const Header = ({ setActiveNav }) => {
             <header id='home'>
                <div className={clsx(styles.container, 'container')}>
                   <h5>Hi, I'm</h5>
-                  <h1>Wobcio</h1>
+                  <h1>Igor Batko</h1>
                   <h5 className='text-light'>Frontend Developer</h5>
 
                   <CTA />

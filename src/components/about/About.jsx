@@ -43,21 +43,19 @@ const About = ({setActiveNav}) => {
                         <article className={styles.card}>
                            <MdOutlineSurfing className={styles.icon} />
                            <h5>Other jobs</h5>
-                           <small>2 500+ hours of teaching windsurfing</small>
+                           <small>2 500+ hours of teaching windsurfing and skiing</small>
                         </article>
 
                         <article className={styles.card}>
                            <HiOutlineCode className={styles.icon} />
                            <h5>Coding</h5>
-                           <small>Frontend React Developer course in Kodilla</small>
+                           <small>Frontend React Developer bootcamp in Kodilla</small>
                         </article>
 
                         <article className={clsx(styles.card, styles.wide)}>
                            <HiOutlineLightBulb className={styles.icon} />
-                           <h5>IQ</h5>
-                           <small>135 points</small>
-                           <br></br>
-                           <small>No jokes, it has been measured</small>
+                           <h5>Math fan</h5>
+                           <small>Love to solve logic tasks</small>
                         </article>
                      </div>
                      <p>
